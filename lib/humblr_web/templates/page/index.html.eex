@@ -1,0 +1,4 @@
+<section class="phx-hero">
+  <h1><%= gettext "Welcome to %{name}!", name: "Humblr.io" %></h1>
+  <p>A humbling experience. </p>
+</section>
