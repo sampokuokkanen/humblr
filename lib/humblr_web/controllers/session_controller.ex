@@ -1,6 +1,6 @@
 defmodule HumblrWeb.SessionController do
   use HumblrWeb, :controller
-
+  
   def new(conn, _) do
     render(conn, "new.html")
   end

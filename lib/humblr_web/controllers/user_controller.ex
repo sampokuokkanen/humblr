@@ -3,7 +3,7 @@ defmodule HumblrWeb.UserController do
 
   alias Humblr.Accounts
   alias Humblr.Accounts.User
-  plug :authenticate when action in [:index, :show]
+  plug :authenticate_user when action in [:index, :show]
 
   def create(conn, %{"user" => user_params}) do
     case Accounts.register_user(user_params) do

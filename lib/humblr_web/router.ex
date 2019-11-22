@@ -23,7 +23,7 @@ defmodule HumblrWeb.Router do
   end
 
   scope "/manage", HumblrWeb do
-    pipe_through [:browse, :authenticate_user]
+    pipe_through [:browser, :authenticate_user]
     resources "/videos", VideoController
   end
 

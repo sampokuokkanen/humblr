@@ -23,7 +23,7 @@ defmodule HumblrWeb do
 
       import Plug.Conn
       import HumblrWeb.Gettext
-      import HumblrWeb.Auth, only [authenticate_user: 2]
+      import HumblrWeb.Auth, only: [authenticate_user: 2]
       alias HumblrWeb.Router.Helpers, as: Routes
     end
   end
@@ -51,7 +51,7 @@ defmodule HumblrWeb do
       use Phoenix.Router
       import Plug.Conn
       import Phoenix.Controller
-      import HumblrWeb.Auth, only [authenticate_user: 2]
+      import HumblrWeb.Auth, only: [authenticate_user: 2]
     end
   end
 
