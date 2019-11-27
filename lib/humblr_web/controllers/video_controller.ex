@@ -4,8 +4,8 @@ defmodule HumblrWeb.VideoController do
   alias Humblr.Multimedia
   alias Humblr.Multimedia.Video
 
-  def index(conn, _params) do
-    videos = Multimedia.list_videos()
+  def index(conn, _params, current_user) do
+    videos = Multimedia.list_user_videos(current_user)
     render(conn, "index.html", videos: videos)
   end
 
@@ -26,7 +26,7 @@ defmodule HumblrWeb.VideoController do
     end
   end
 
-  def show(conn, %{"id" => id}) do
+  def show(conn, %{"id" => id}, _current_user) do
     video = Multimedia.get_video!(id)
     render(conn, "show.html", video: video)
   end
