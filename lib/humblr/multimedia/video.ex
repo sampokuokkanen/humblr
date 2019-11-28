@@ -7,6 +7,7 @@ defmodule Humblr.Multimedia.Video do
     field :title, :string
     field :url, :string
     belongs_to :user, Humblr.Accounts.User
+    belongs_to :category, Humblr.Multimedia.Category
 
     timestamps()
   end
@@ -14,7 +15,7 @@ defmodule Humblr.Multimedia.Video do
   @doc false
   def changeset(video, attrs) do
     video
-    |> cast(attrs, [:url, :title, :description])
+    |> cast(attrs, [:url, :title, :description, :category_id])
     |> validate_required([:url, :title, :description])
   end
 end

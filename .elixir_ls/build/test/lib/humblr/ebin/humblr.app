@@ -8,6 +8,7 @@
                         'Elixir.Humblr.Accounts.User',
                         'Elixir.Humblr.Application','Elixir.Humblr.DataCase',
                         'Elixir.Humblr.Multimedia',
+                        'Elixir.Humblr.Multimedia.Category',
                         'Elixir.Humblr.Multimedia.Video','Elixir.Humblr.Repo',
                         'Elixir.HumblrWeb','Elixir.HumblrWeb.Auth',
                         'Elixir.HumblrWeb.ChannelCase',
