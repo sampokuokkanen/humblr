@@ -7,7 +7,7 @@ defmodule Humblr.Repo.Migrations.CreateCategories do
 
       timestamps()
     end
-    
-    create_unique_index(:categories, [:name])
+
+    create unique_index(:categories, [:name])
   end
 end

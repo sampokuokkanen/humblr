@@ -7,6 +7,12 @@ defmodule Humblr.Multimedia do
   alias Humblr.Repo
 
   alias Humblr.Multimedia.Video
+  alias Humblr.Multimedia.Category
+
+  def create_category!(name) do
+    Repo.insert!(%Category{name: name}, on_conflict: :nothing)
+  end
+
   alias Humblr.Accounts
   @doc """
   Returns the list of videos.

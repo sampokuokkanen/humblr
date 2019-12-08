@@ -9,3 +9,9 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+alias Humblr.Multimedia
+
+for category <- ~w(Action Drama Comedy Scifi Romance) do
+  Multimedia.create_category!(category)
+end
